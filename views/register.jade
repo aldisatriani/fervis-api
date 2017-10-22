@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    .container
+    
+    if errors
+     ul 
+      for error in errors
+         div.alert.alert-danger #{error.msg}
+    if err
+      div.alert.alert-danger #{err.message}
+    form.form-signin(role='form', action="/register",method="post", style='max-width: 300px;')
+     h2.form-signin-heading Sign Up here
+     input.form-control(type='text', name="email", placeholder='Your Email', value=email)
+     input.form-control(type='text', name="username", placeholder='Your Username', value=username)
+     input.form-control(type='password', name="password", placeholder='Your Password', value=password)
+     input.form-control(type='password', name="password2", placeholder='Confirm Your Password', value=password2)
+     button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign Up
+     div.alert.alert-success #{success_msg}
+     
+     

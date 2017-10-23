@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fervis = require('../models/fervis');
-const userController = require('../controller/userController')
+//const userController = require('../controller/userController')
 const itemController = require('../controller/itemController')
 const auth = require("../controller/AuthController.js");
 
